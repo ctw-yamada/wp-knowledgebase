@@ -1,9 +1,9 @@
 <?php
 /*
 	Plugin Name: WP Knowledgebase
-	Plugin URI: http://wordpress.org/plugins/wp-knowledgebase
+	Plugin URI: https://github.com/ctw-yamada/wp-knowledgebase
 	Description: Simple and flexible knowledgebase plugin for WordPress
-	Author: Enigma Plugins
+	Author: ctw_yamada
 	Version: 1.1.5
 	Author URI: http://enigmaplugins.com
 	Requires at least: 2.7
@@ -17,7 +17,6 @@ define( 'KBE_PLUGIN_VERSION', '1.1.5' );
 function kbe_plugin_load_textdomain() {
 
 	$locale = apply_filters( 'plugin_locale', get_locale(), 'wp-knowledgebase' );
-
 	// Load textdomain
 	load_textdomain( 'wp-knowledgebase', WP_LANG_DIR . '/wp-knowledgebase/wp-knowledgebase-' . $locale . '.mo' );
 	load_plugin_textdomain( 'wp-knowledgebase', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
@@ -61,7 +60,6 @@ define( 'KBE_POST_TYPE', 'kbe_knowledgebase' );
 define( 'KBE_POST_TAXONOMY', 'kbe_taxonomy' );
 define( 'KBE_POST_TAGS', 'kbe_tags' );
 define( 'KBE_PAGE_TITLE', kbe_get_knowledgebase_page_id() );
-
 
 require 'includes/migrations/class-abstract-migration.php';
 require 'includes/migrations/migration-install.php';
