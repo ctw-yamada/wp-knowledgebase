@@ -284,24 +284,9 @@
     list-style: none;
   }
 
-  .kbe_articles ul li {
-    list-style: none outside none;
-    padding: 2px 0 0px 30px;
-    margin: 0 0 3px;
-    background: url(images/article.svg) no-repeat left center;
-    background-size: 14px auto;
-  }
-
   #kbe_content .kbe_leftcol {
     .kbe_articles {
       ul li {
-        a {
-          color: $font-active-color;
-          font-size: 14px;
-          line-height: 32px;
-          text-decoration: none;
-          font-weight: normal;
-        }
         span {
           color: $font-active-color;
           display: block;
