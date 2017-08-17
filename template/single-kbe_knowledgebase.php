@@ -1,5 +1,5 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+include('php/common.php');
 
 get_header( 'knowledgebase' );
 
@@ -9,37 +9,13 @@ if ( KBE_SEARCH_SETTING == 1 ) {
 	wp_enqueue_script( 'kbe_live_search' );
 }
 
-// Classes For main content div
-if ( KBE_SIDEBAR_INNER == 0 ) {
-	$kbe_content_class = 'class="kbe_content_full"';
-} elseif ( KBE_SIDEBAR_INNER == 1 ) {
-	$kbe_content_class = 'class="kbe_content_right"';
-} elseif ( KBE_SIDEBAR_INNER == 2 ) {
-	$kbe_content_class = 'class="kbe_content_left"';
-}
+init_classes(KBE_SIDEBAR_INNER,$kbe_content_class,$kbe_sidebar_class)
 
-// Classes For sidebar div
-if ( KBE_SIDEBAR_INNER == 0 ) {
-	$kbe_sidebar_class = 'kbe_aside_none';
-} elseif ( KBE_SIDEBAR_INNER == 1 ) {
-	$kbe_sidebar_class = 'kbe_aside_left';
-} elseif ( KBE_SIDEBAR_INNER == 2 ) {
-	$kbe_sidebar_class = 'kbe_aside_right';
-}
 ?>
-<div id="kbe_container"><?php
-
-	// Breadcrumbs
-	if ( KBE_BREADCRUMBS_SETTING == 1 ) {
-		?><div class="kbe_breadcrum"><?php
-				kbe_breadcrumbs();
-		?></div><?php
-	}
-
-	// Search field
-	if ( KBE_SEARCH_SETTING == 1 ) {
-		kbe_search_form();
-	}
+<div id="kbe_container">
+<?php
+	bread_crumbs();
+	search_field();
 
 	// Content
 	?><div id="kbe_content" <?php echo $kbe_content_class; ?>>
@@ -65,12 +41,8 @@ if ( KBE_SIDEBAR_INNER == 0 ) {
 
     </div>
 
-    <!--aside-->
-    <div class="kbe_aside <?php echo $kbe_sidebar_class; ?>"><?php
-		if ( (KBE_SIDEBAR_INNER == 2) || (KBE_SIDEBAR_INNER == 1) ) {
-			dynamic_sidebar( 'kbe_cat_widget' );
-		}
-	?></div>
+    <?php aside(); ?>
 
-</div><?php
+</div>
+<?php
 get_footer( 'knowledgebase' );

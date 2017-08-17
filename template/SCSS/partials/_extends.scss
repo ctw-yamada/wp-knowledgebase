@@ -1,0 +1,35 @@
+@import "variables";
+@import "mixin";
+
+.extend_a{
+  color: $font-color;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 3px 0px;
+  display: block;
+  &:before {
+    @include image_article;
+  }
+}
+
+.extend_li {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-left: 0;
+  padding: 0 0 0 1rem;
+  line-height: 20px;
+  background-color: gray;
+  border-radius: 5px;
+  &:hover{
+    background-color: darken(gray,15%);
+  }
+  a {
+    @extend .extend_a;
+  }
+}
+
+.extend_article_list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

@@ -28,7 +28,6 @@ $kbe_tag_post_args = array(
 		)
 	)
 );
-$kbe_tag_post_qry  = new WP_Query( $kbe_tag_post_args );
 
 ?><div id="kbe_container"><?php
 
@@ -43,16 +42,7 @@ $kbe_tag_post_qry  = new WP_Query( $kbe_tag_post_args );
             <div class="kbe_articles">
                 <h2><strong>Tag: </strong><?php echo $kbe_tag_name; ?></h2>
 
-                <ul><?php
-					if ( $kbe_tag_post_qry->have_posts() ) :
-						while ( $kbe_tag_post_qry->have_posts() ) :
-							$kbe_tag_post_qry->the_post();
-							?><li>
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </li><?php
-						endwhile;
-					endif;
-				?></ul>
+                <?php kbe_articles_list($kbe_tag_post_args); ?>
 
             </div>
         </div>
