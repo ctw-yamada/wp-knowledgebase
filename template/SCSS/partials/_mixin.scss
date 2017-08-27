@@ -13,3 +13,10 @@
 	background: url(images/article.svg) no-repeat left center;
 	background-size: 14px auto;
 }
+
+@mixin linkColor($color, $amount:30%) {
+	background-color: $color;
+	&:hover, &:active, &:focus {
+		background-color: darken($color, $amount);
+	}
+}

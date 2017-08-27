@@ -41,8 +41,8 @@ init_classes(KBE_SIDEBAR_INNER,$kbe_content_class,$kbe_sidebar_class)
 
     </div>
 
-    <?php aside(); ?>
-
-</div>
 <?php
-get_footer( 'knowledgebase' );
+    aside($kbe_sidebar_class);
+    only_theme();
+    echo '</div>';
+    get_footer( 'knowledgebase' );

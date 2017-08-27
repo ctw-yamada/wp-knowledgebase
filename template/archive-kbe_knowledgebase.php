@@ -201,14 +201,8 @@ if ( KBE_SIDEBAR_HOME == 0 ) {
 
     </div>
     <!--content-->
-
-    <!--aside-->
-    <div class="kbe_aside <?php echo $kbe_sidebar_class; ?>"><?php
-		if ( (KBE_SIDEBAR_HOME == 2) || (KBE_SIDEBAR_HOME == 1) ) {
-			dynamic_sidebar( 'kbe_cat_widget' );
-		}
-	?></div>
-    <!--/aside-->
-
-</div><?php
-get_footer( 'knowledgebase' );
+<?php
+    aside($kbe_sidebar_class);
+    only_theme();
+    echo '</div>';
+    get_footer( 'knowledgebase' );

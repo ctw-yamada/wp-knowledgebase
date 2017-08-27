@@ -1,5 +1,5 @@
 /* line 4, SCSS/partials/_extends.scss */
-.extend_a, .extend_li a, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li a, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li a {
+.extend_a, .extend_li a {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
@@ -7,7 +7,7 @@
   display: block;
 }
 /* line 10, SCSS/partials/_extends.scss */
-.extend_a:before, .extend_li a:before, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li a:before, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li a:before {
+.extend_a:before, .extend_li a:before {
   content: '';
   display: inline-block;
   margin-right: 1rem;
@@ -18,7 +18,7 @@
 }
 
 /* line 15, SCSS/partials/_extends.scss */
-.extend_li, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li {
+.extend_li {
   margin-top: 5px;
   margin-bottom: 20px;
   margin-left: 0;
@@ -28,210 +28,199 @@
   border-radius: 5px;
 }
 /* line 23, SCSS/partials/_extends.scss */
-.extend_li:hover, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li:hover, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li:hover {
+.extend_li:hover {
   background-color: #5a5a5a;
 }
 
 /* line 31, SCSS/partials/_extends.scss */
-.extend_article_list, #kbe_container #kbe_content .kbe_category .kbe_article_list, #kbe_container #kbe_content .kbe_child_category .kbe_child_article_list {
+.extend_article_list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 6, SCSS/kbe_style.scss */
-#kbe_container {
-  background: #333;
-  color: #fff;
-  width: 960px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 10px;
-  border-radius: 15px;
-  /*===> breadcrumb <===*/
-  /*===> search field <===*/
-  /*===> content <===*/
-  /*===> leftcol <===*/
-  /*===> Articles <===*/
-  /*===> Search Page <===*/
-  /*===> aside <===*/
-  /*===> Details <===*/
-  /*===> Comments <===*/
-  /*======> Tags <======*/
-  /*======> responsive layout <======*/
+/* line 30, SCSS/kbe_style.scss */
+.extend_a, .extend_li a, #kbe_container .kbe_article_list li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 3px 0;
+  display: block;
 }
-/* line 14, SCSS/kbe_style.scss */
-#kbe_container table {
-  border: 1px solid #D3D3D3;
-  padding: 4px;
-  font-size: 12px;
-  margin: 10px 0px;
+
+/* line 40, SCSS/kbe_style.scss */
+.extend_a:before, .extend_li a:before, #kbe_container .kbe_article_list li a:before {
+  content: '';
+  display: inline-block;
+  margin-right: 1rem;
+  width: 16px;
+  height: 16px;
+  background: url(images/article.svg) no-repeat left center;
+  background-size: 14px auto;
 }
-/* line 17, SCSS/kbe_style.scss */
-#kbe_container table th {
-  font-weight: bold;
+
+/* line 52, SCSS/kbe_style.scss */
+.extend_li, #kbe_container .kbe_article_list li {
+  margin-top: 5px;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  padding: 0 0 0 1rem;
+  line-height: 20px;
+  background-color: gray;
+  border-radius: 5px;
 }
-/* line 20, SCSS/kbe_style.scss */
-#kbe_container table tr, #kbe_container table td {
-  border: 1px solid #D3D3D3;
-  padding: 4px;
-  font-size: 12px;
-}
-/* line 27, SCSS/kbe_style.scss */
-#kbe_container .kbe_breadcrum {
-  margin: 0 0 30px;
-  overflow: hidden;
-  width: 100%;
-}
-/* line 31, SCSS/kbe_style.scss */
-#kbe_container .kbe_breadcrum ul {
+
+/* line 65, SCSS/kbe_style.scss */
+#kbe_container .kbe_article_list, #kbe_container .kbe_child_article_list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 35, SCSS/kbe_style.scss */
-#kbe_container .kbe_breadcrum ul li {
-  float: left;
-  padding: 0 3px 2px 3px;
-  line-height: 22px;
+
+/* line 94, SCSS/kbe_style.scss */
+.extend_li:hover {
+  background-color: #5a5a5a;
 }
-/* line 39, SCSS/kbe_style.scss */
-#kbe_container .kbe_breadcrum ul li a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #fff;
-}
-/* line 49, SCSS/kbe_style.scss */
-#kbe_container .kbe_search_field {
+
+/* line 1, SCSS/partials/_search.scss */
+.kbe_search_field {
   margin: 0 0 36px;
   width: 100%;
 }
-/* line 52, SCSS/kbe_style.scss */
-#kbe_container .kbe_search_field input[type=text] {
-  color: #666666;
+/* line 4, SCSS/partials/_search.scss */
+.kbe_search_field input[type=text] {
+  color: #5a5a5a;
   font-size: 15px;
   border: 1px solid #dbdbdb;
   width: 438px;
   padding: 12px 17px 13px 60px;
-  background: url(images/kbe_search_btn.png) no-repeat left #fff;
+  background: url(images/kbe_search_btn.png) no-repeat left #f2f2f2;
 }
-/* line 62, SCSS/kbe_style.scss */
-#kbe_container #search-result {
-  color: #feffa4;
+
+/* line 13, SCSS/partials/_search.scss */
+#search-result {
+  color: #f2f2f2;
   font-size: 14px;
   width: 517px;
   position: absolute;
   z-index: 9999;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: gray;
 }
-/* line 69, SCSS/kbe_style.scss */
-#kbe_container #search-result li {
-  background: url(images/article.svg) no-repeat scroll left 16px top 13px white;
+/* line 21, SCSS/partials/_search.scss */
+#search-result li {
+  background-color: gray;
+  background: url(images/article.svg) no-repeat scroll left 16px top 13px;
   background-size: 14px auto;
   list-style: none outside none;
-  padding: 0px 0 0px 8px;
-  border-left: 1px solid #CCCCCC;
-  border-right: 1px solid #CCCCCC;
+  padding: 0 0 0 8px;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
 }
-/* line 76, SCSS/kbe_style.scss */
-#kbe_container #search-result li a {
+/* line 19, SCSS/partials/_mixin.scss */
+#search-result li:hover, #search-result li:active, #search-result li:focus {
+  background-color: #343434;
+}
+/* line 29, SCSS/partials/_search.scss */
+#search-result li:hover {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 22px;
+}
+/* line 35, SCSS/partials/_search.scss */
+#search-result li a {
   background-position: 20px center;
   background-repeat: no-repeat;
   display: block;
-  color: #595959;
+  color: #5a5a5a;
   text-decoration: none;
-  color: #feffa4;
+  color: #f2f2f2;
   font-size: 14px;
   font-weight: normal;
   line-height: 22px;
   padding: 12px 20px 12px 55px;
 }
-/* line 87, SCSS/kbe_style.scss */
-#kbe_container #search-result li a:hover {
-  color: #feffa4 !important;
+/* line 46, SCSS/partials/_search.scss */
+#search-result li a:hover {
+  color: #f2f2f2 !important;
   text-decoration: none;
   font-weight: normal;
 }
-/* line 93, SCSS/kbe_style.scss */
-#kbe_container #search-result li:hover {
-  color: #ffb8cf !important;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 22px;
-  background-color: #f8f8f8;
-}
-/* line 104, SCSS/kbe_style.scss */
-#kbe_container .kbe_no_result {
-  background: url(images/article.svg) no-repeat left center;
+
+/* line 55, SCSS/partials/_search.scss */
+.kbe_no_result {
+  background: url(images/article.svg) no-repeat;
+  background-position: 2rem,center;
+  background-color: gray;
   background-size: 14px auto;
-  border-bottom: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
   font-weight: bold;
   padding: 16px 0 14px 62px;
   display: inline-block;
   width: 453px;
 }
-/* line 118, SCSS/kbe_style.scss */
-#kbe_container .kbe_content_full {
-  width: 980px !important;
-  display: inline-block;
-  float: none;
+
+/* line 107, SCSS/kbe_style.scss */
+#kbe_container {
+  /* --------------------------------------------------
+  media query
+  -------------------------------------------------- */
+  /* smart phone
+  -------------------------------------------------- */
+  /* tablet
+  -------------------------------------------------- */
+  /* PC(small)
+  -------------------------------------------------- */
+  /* PC(large)
+  -------------------------------------------------- */
+  /* PC(Extra large)
+  -------------------------------------------------- */
+}
+/* line 108, SCSS/kbe_style.scss */
+#kbe_container h2 {
+  border-bottom: solid 3px #fff;
+}
+/* line 120, SCSS/kbe_style.scss */
+#kbe_container .kbe_breadcrum {
+  margin: 0 0 30px;
+  overflow: hidden;
+  width: 100%;
 }
 /* line 124, SCSS/kbe_style.scss */
-#kbe_container .kbe_content_right {
-  width: 715px !important;
+#kbe_container .kbe_breadcrum ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 128, SCSS/kbe_style.scss */
+#kbe_container .kbe_breadcrum ul li {
+  float: left;
+  padding: 0 3px 2px;
+  line-height: 22px;
+}
+/* line 132, SCSS/kbe_style.scss */
+#kbe_container .kbe_breadcrum ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #f2f2f2;
+}
+/* line 140, SCSS/kbe_style.scss */
+#kbe_container .kbe_count {
+  color: #f2f2f2;
+  font-size: 14px;
+  width: 88px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: 400;
   float: right;
+  display: block;
+  background: #166c94;
 }
-/* line 129, SCSS/kbe_style.scss */
-#kbe_container .kbe_content_left {
-  width: 715px !important;
-  float: left;
-}
-/* line 136, SCSS/kbe_style.scss */
-#kbe_container .kbe_leftcol {
-  float: left;
-  width: 100%;
-}
-/* line 139, SCSS/kbe_style.scss */
-#kbe_container .kbe_leftcol h1:first-letter {
-  font-size: 2em;
-  color: #42bcf4;
-}
-/* line 143, SCSS/kbe_style.scss */
-#kbe_container .kbe_leftcol > h2 {
-  background-color: #5870a0;
-  padding: 0.5em;
-  border-radius: 0.5em;
-}
-/* line 148, SCSS/kbe_style.scss */
-#kbe_container .kbe_leftcol > h3 {
-  color: gray;
-  position: relative;
-  padding: 0.6em;
-  background: #e0edff;
-}
-/* line 153, SCSS/kbe_style.scss */
-#kbe_container .kbe_leftcol > h3:after {
-  position: absolute;
-  content: '';
-  top: 100%;
-  left: 30px;
-  border: 15px solid transparent;
-  border-top: 15px solid #e0edff;
-  width: 0;
-  height: 0;
-}
-/* line 165, SCSS/kbe_style.scss */
-#kbe_container .kbe_leftcol p {
-  margin-left: 1.5rem;
-}
-/* line 170, SCSS/kbe_style.scss */
-#kbe_container .kbe_categories {
-  width: 100%;
-}
-/* line 174, SCSS/kbe_style.scss */
+/* line 152, SCSS/kbe_style.scss */
 #kbe_container .kbe_category {
   width: 90%;
   margin: 0 35px 30px 0;
@@ -240,995 +229,57 @@
   vertical-align: top;
   position: relative;
 }
-/* line 181, SCSS/kbe_style.scss */
-#kbe_container .kbe_category span.switch {
-  position: absolute;
-  top: 4px;
-  left: 0px;
-  margin: 0px;
-}
-/* line 186, SCSS/kbe_style.scss */
-#kbe_container .kbe_category span.switch img {
-  cursor: pointer;
-  margin: 0px;
-  content: none;
-}
-/* line 192, SCSS/kbe_style.scss */
+/* line 159, SCSS/kbe_style.scss */
 #kbe_container .kbe_category h2 {
-  border-bottom: solid 3px white;
-  padding-bottom: 8px;
+  all: initial;
+  border-bottom: solid 3px #f2f2f2;
+  padding-left: 1.5rem;
 }
-/* line 200, SCSS/kbe_style.scss */
-#kbe_container #kbe_content h2 span.kbe_count {
-  color: #fff;
-  font-size: 14px;
-  width: 88px;
-  height: 26px;
-  line-height: 26px;
-  text-align: center;
-  font-weight: 400;
-  float: right;
-  display: block;
-  background: #166c94;
+/* line 163, SCSS/kbe_style.scss */
+#kbe_container .kbe_category h2:before {
+  all: initial;
 }
-/* line 213, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_category h2 a {
+/* line 166, SCSS/kbe_style.scss */
+#kbe_container .kbe_category h2 a {
   display: inline-block;
   text-decoration: none;
   color: #fff;
   width: 70%;
 }
-/* line 230, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_category h2, #kbe_container #kbe_content .kbe_category h3 {
-  padding-left: 1rem;
-}
-/* line 233, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_category .kbe_child_category {
-  width: 100%;
-  height: auto;
-  margin-bottom: 30px;
-}
-/* line 239, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_child_category h3 {
+/* line 173, SCSS/kbe_style.scss */
+#kbe_container .kbe_category h3 {
+  all: initial;
   position: relative;
+  padding-left: 1rem;
   border-bottom: 1px solid #cccccc;
-  padding-bottom: 8px !important;
   color: #fff;
   font-size: 20px !important;
 }
-/* line 245, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_child_category h3 span {
-  position: absolute;
-  right: 0;
-}
-/* line 248, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_child_category h3 span.kbe_count {
-  color: #fff;
-  font-size: 13px;
-  width: 88px;
-  height: 26px;
-  line-height: 25px;
-  text-align: center;
-  font-weight: 400;
-  float: right;
-  display: block;
-  background: #166c94;
-  margin-bottom: 0px !important;
-}
-/* line 262, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_child_category h3 a {
+/* line 180, SCSS/kbe_style.scss */
+#kbe_container .kbe_category h3 a {
   display: inline-block;
   text-decoration: none;
   color: #fff;
   width: 70%;
-  margin-top: 7px;
 }
-/* line 277, SCSS/kbe_style.scss */
-#kbe_container .kbe_content_right .kbe_leftcol {
-  float: right !important;
+/* line 186, SCSS/kbe_style.scss */
+#kbe_container .kbe_category h3:before, #kbe_container .kbe_category h3:after {
+  all: initial;
 }
-/* line 281, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles ul {
-  padding: 0;
+/* line 190, SCSS/kbe_style.scss */
+#kbe_container .kbe_category span.switch {
+  position: absolute;
+  top: 4px;
+  left: 0;
   margin: 0;
-  list-style: none;
 }
-/* line 290, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles ul li span {
-  color: #ffb8cf;
-  display: block;
-  font-size: 13px;
-  margin-bottom: 0;
-}
-/* line 296, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles ul li p {
-  margin-bottom: 0px;
-}
-/* line 300, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles .kbe_read_more {
-  float: right;
-  margin-top: -8px;
-}
-/* line 303, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles .kbe_read_more a {
-  font-size: 14px;
-}
-/* line 308, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles_search ul {
-  padding: 0;
+/* line 195, SCSS/kbe_style.scss */
+#kbe_container .kbe_category span.switch img {
+  cursor: pointer;
   margin: 0;
-  list-style: none;
-}
-/* line 317, SCSS/kbe_style.scss */
-#kbe_container .kbe_articles_search ul li {
-  list-style: none outside none;
-  padding: 4px 0 24px 30px;
-  margin: 0 0 10px;
-  background: url(images/article.svg) no-repeat left center;
-  background-size: 14px auto;
-  border-bottom: 1px solid #e2e2e2;
-}
-/* line 328, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles_search ul li a {
-  color: #feffa4;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 32px;
-  text-decoration: none;
-  font-weight: normal;
-}
-/* line 336, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles_search ul li span {
-  color: #ffb8cf;
-  display: block;
-  font-size: 13px;
-  margin-bottom: 0;
-}
-/* line 342, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles_search ul li p {
-  margin-bottom: 0px;
-}
-/* line 346, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles_search .kbe_read_more {
-  float: right;
-  margin-top: -8px;
-}
-/* line 349, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_articles_search .kbe_read_more a {
-  font-size: 14px;
-  font-weight: normal;
-}
-/* line 356, SCSS/kbe_style.scss */
-#kbe_container #kbe_container blockquote {
-  margin: 15px 30px 0 10px;
-  padding-left: 20px;
-  border-left: 5px solid #ddd;
-  font-style: italic;
-}
-/* line 361, SCSS/kbe_style.scss */
-#kbe_container #kbe_container blockquote cite {
-  margin: 5px 0 0;
-  display: block;
-}
-/* line 369, SCSS/kbe_style.scss */
-#kbe_container .kbe_aside {
-  width: 222px;
-  float: right;
-}
-/* line 372, SCSS/kbe_style.scss */
-#kbe_container .kbe_aside.kbe_aside_none {
-  display: none !important;
-}
-/* line 375, SCSS/kbe_style.scss */
-#kbe_container .kbe_aside.kbe_aside_left {
-  float: left !important;
-}
-/* line 378, SCSS/kbe_style.scss */
-#kbe_container .kbe_aside.kbe_aside_right {
-  float: right !important;
-}
-/* line 383, SCSS/kbe_style.scss */
-#kbe_container .kbe_widget {
-  margin-bottom: 40px;
-  /* Clearfix */
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 389, SCSS/kbe_style.scss */
-#kbe_container .kbe_widget h2 {
-  margin-bottom: 15px !important;
-  padding-bottom: 10px !important;
-}
-/* line 393, SCSS/kbe_style.scss */
-#kbe_container .kbe_widget ul {
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0;
-}
-/* line 400, SCSS/kbe_style.scss */
-#kbe_container #kbe_container .kbe_widget li {
-  margin-bottom: 16px;
-  margin-left: 0px;
-  background: url(images/angle-right.svg) no-repeat;
-  background-position: left center;
-  background-size: 18px auto;
-  padding: 0 0 0 25px;
-}
-/* line 409, SCSS/kbe_style.scss */
-#kbe_container .kbe_widget li a {
-  color: #ffb8cf;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 20px;
-}
-/* line 416, SCSS/kbe_style.scss */
-#kbe_container #kbe_container .kbe_aside .kbe_widget_article li {
-  background: url(images/article.svg) no-repeat left center;
-  background-size: 14px auto;
-}
-/* line 422, SCSS/kbe_style.scss */
-#kbe_container .kbe_widget label {
-  font-size: 13px;
-  color: #fff;
-  float: left;
-  margin: 0 20px 0 0;
-  line-height: 25px;
-}
-/* line 429, SCSS/kbe_style.scss */
-#kbe_container .kbe_widget select {
-  width: 100px;
-  height: 26px;
-  background: #fff;
-  border: 1px solid #dbdbdb;
-  font-size: 13px;
-  padding: 0 10px;
-  color: #fff;
-}
-/* line 438, SCSS/kbe_style.scss */
-#kbe_container .kbe_widget input[type=text] {
-  width: 90%;
-  height: 26px;
-  font-size: 13px;
-  color: #333;
-  padding: 0 5%;
-}
-/* line 445, SCSS/kbe_style.scss */
-#kbe_container .kbe_widget .kbe_tags_widget {
-  float: left;
-  height: auto;
-  line-height: 26px;
-  width: 100%;
-  word-spacing: 4px;
-  margin-bottom: 40px;
-}
-/* line 452, SCSS/kbe_style.scss */
-#kbe_container .kbe_widget .kbe_tags_widget a {
-  text-decoration: none;
-  line-height: 26px;
-  word-spacing: 4px;
-}
-/* line 463, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol a {
-  color: #166c94;
-  text-decoration: none;
-}
-/* line 470, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol h4 {
-  font-size: 16px;
-  padding-bottom: 0px;
-  margin-bottom: 10px;
-}
-/* line 475, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol p {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 26px;
-  color: #fff;
-  margin-bottom: 40px;
-}
-/* line 482, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol ul {
-  list-style-type: disc;
-  padding: 0 19px;
-  margin-bottom: 20px;
-}
-/* line 486, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol ul li {
-  line-height: 35px;
-  font-size: 14px;
-  color: #ffb8cf;
-}
-/* line 494, SCSS/kbe_style.scss */
-#kbe_container ol {
-  line-height: 35px;
-  font-size: 14px;
-  color: #ffb8cf;
-}
-/* line 501, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol ol {
-  list-style-type: decimal;
-  padding: 0 21px;
-  margin-bottom: 20px;
-}
-/* line 506, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol span {
-  color: #ffb8cf;
-  font-size: 16px;
-  margin-bottom: 40px;
-  display: block;
-}
-/* line 511, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol span a {
-  text-decoration: none;
-  font-size: 14px;
-}
-/* line 517, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_reply h4 {
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-/* line 521, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_reply span {
-  font-size: 14px;
-  font-weight: normal;
-}
-/* line 525, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_reply label {
-  display: block;
-  margin-bottom: 7px;
-}
-/* line 529, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_reply input[type=text] {
-  width: 255px;
-  height: 27px;
-  margin-bottom: 23px;
-  border: 1px solid #cccccc;
-  padding: 10px 10px;
-}
-/* line 536, SCSS/kbe_style.scss */
-#kbe_container #kbe_content .kbe_leftcol .kbe_reply textarea {
-  width: 602px;
-  height: 160px;
-  display: block;
-  margin-bottom: 30px;
-  padding: 10px 10px;
-}
-/* line 546, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply {
-  width: 622px;
-  padding-top: 40px;
-}
-/* line 551, SCSS/kbe_style.scss */
-#kbe_container .kbe_tags_div {
-  width: 100%;
-  height: auto;
-  margin: 8px 0 16px;
-  overflow: hidden;
-}
-/* line 558, SCSS/kbe_style.scss */
-#kbe_container .kbe_tags_icon {
-  background: url(images/kbe_icon_tag.png) no-repeat left top 1px;
-  float: left;
-  height: 25px;
-  width: 25px;
-  margin-right: 12px;
-}
-/* line 566, SCSS/kbe_style.scss */
-#kbe_container .kbe_tags_div ul li {
-  float: left;
-  list-style: none;
-  padding-right: 6px;
-  text-transform: capitalize;
-}
-/* line 571, SCSS/kbe_style.scss */
-#kbe_container .kbe_tags_div ul li a {
-  color: #ffb8cf !important;
-  text-decoration: none !important;
-  font-size: 14px;
-}
-/* line 576, SCSS/kbe_style.scss */
-#kbe_container .kbe_tags_div ul li::after {
-  content: ",";
-}
-/* line 579, SCSS/kbe_style.scss */
-#kbe_container .kbe_tags_div ul li:last-child:after {
-  content: "";
-}
-/* line 587, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply #comments {
-  margin-bottom: 16px;
-  font-size: 16px;
-}
-/* line 591, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply .commentlist li {
-  margin-top: 16px;
-  background-color: #e3e3e3;
-  float: left;
-  padding-bottom: 12px;
-  border-radius: 6px;
-  width: 100%;
-}
-/* line 599, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply ol {
-  padding: 0px !important;
-  list-style: none !important;
-}
-/* line 603, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply ul {
-  list-style: none !important;
-}
-/* line 606, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply .fn {
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: capitalize;
-  margin-left: 6px;
-}
-/* line 612, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply .comment-meta {
-  margin-top: -11px;
-  width: 50%;
-}
-/* line 616, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply .comment-edit-link, #kbe_container .kbe_reply .says {
-  display: none !important;
-}
-/* line 619, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply .commentlist li p {
-  padding-right: 9px;
-}
-/* line 622, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply .comment-body {
-  padding-left: 12px;
-  padding-top: 12px;
-}
-/* line 626, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply ul {
-  margin-left: 30px !important;
-  padding: 0px !important;
-}
-/* line 630, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply .children li {
-  background-color: #f2f2f2;
-  margin-left: -10px;
-  margin-right: 12px;
-  padding: 0 0 10px 0 !important;
-}
-/* line 636, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply #respond h3 {
-  font-size: 18px;
-  padding-top: 18px !important;
-}
-/* line 640, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply .commentlist li #respond {
-  border-top: 1px solid #ccc;
-  margin-left: 10px;
-  width: 97%;
-}
-/* line 645, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply #respond form {
-  margin-top: 0px;
-}
-/* line 648, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply .cancel-comment-reply {
-  margin-top: 0px;
-  font-size: 16px;
-}
-/* line 653, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply #respond input[type="text"] {
-  border: 1px solid #cccccc;
-  height: 39px !important;
-  margin-bottom: 23px;
-  padding: 10px;
-  width: 602px !important;
-}
-/* line 660, SCSS/kbe_style.scss */
-#kbe_container .kbe_reply #respond textarea {
-  display: block;
-  height: 160px;
-  margin-bottom: 30px;
-  padding: 10px;
-  resize: none;
-  width: 602px;
-}
-/* line 673, SCSS/kbe_style.scss */
-#kbe_container .kbe_widget .wp-tag-cloud li {
-  background-size: 14px auto;
-  background-image: url(images/tag.svg) !important;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* line 683, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol {
-    width: 65%;
-  }
-  /* line 686, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_category {
-    width: 100%;
-    display: inline-block;
-  }
-  /* line 691, SCSS/kbe_style.scss */
-  #kbe_container .kbe_categories {
-    width: 100%;
-  }
-  /* line 694, SCSS/kbe_style.scss */
-  #kbe_container .kbe_aside {
-    float: left;
-    width: 222px;
-  }
-  /* line 698, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full {
-    width: 100% !important;
-  }
-  /* line 700, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_leftcol {
-    width: 100% !important;
-  }
-  /* line 703, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_category {
-    width: 44% !important;
-    display: inline-block;
-  }
-  /* line 708, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_ful .kbe_categories {
-    width: 109%;
-  }
-  /* line 711, SCSS/kbe_style.scss */
-  #kbe_container .kbe_articles, #kbe_container .kbe_articles_search, #kbe_container #kbe_container {
-    width: 100%;
-  }
-  /* line 714, SCSS/kbe_style.scss */
-  #kbe_container .kbe_leftcol {
-    width: 96% !important;
-  }
-  /* line 717, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_left {
-    float: left;
-    width: 64% !important;
-    margin-bottom: 30px;
-  }
-  /* line 722, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_right {
-    float: left;
-    width: 64% !important;
-    margin-bottom: 30px;
-    margin-right: 36px;
-  }
-  /* line 728, SCSS/kbe_style.scss */
-  #kbe_container .kbe_reply {
-    width: 80%;
-  }
-  /* line 733, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply input[type="text"] {
-    width: 60%;
-  }
-  /* line 736, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply textarea {
-    width: 95%;
-  }
-  /* line 740, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content h2 {
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 767px) {
-  /* line 748, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol {
-    width: 65%;
-  }
-  /* line 751, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_category {
-    width: 100%;
-    display: inline-block;
-  }
-  /* line 756, SCSS/kbe_style.scss */
-  #kbe_container .kbe_categories {
-    width: 100%;
-  }
-  /* line 759, SCSS/kbe_style.scss */
-  #kbe_container #search-result {
-    width: 100% !important;
-  }
-  /* line 762, SCSS/kbe_style.scss */
-  #kbe_container .kbe_no_result {
-    width: 90% !important;
-  }
-  /* line 765, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_left, #kbe_container .kbe_content_right {
-    width: 68% !important;
-  }
-  /* line 768, SCSS/kbe_style.scss */
-  #kbe_container .kbe_leftcol {
-    width: 96% !important;
-  }
-  /* line 771, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_aside {
-    width: 220px;
-  }
-  /* line 775, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_aside {
-    display: none;
-  }
-  /* line 778, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_leftcol {
-    width: 100% !important;
-  }
-  /* line 781, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_category {
-    width: 44% !important;
-    display: inline-block;
-  }
-  /* line 786, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_ful .kbe_categories {
-    width: 107%;
-  }
-  /* line 789, SCSS/kbe_style.scss */
-  #kbe_container .kbe_articles, #kbe_container .kbe_articles_search, #kbe_container #kbe_container, #kbe_container .kbe_leftcol, #kbe_container .kbe_reply {
-    width: 100%;
-  }
-  /* line 794, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply input[type="text"] {
-    width: 60%;
-  }
-  /* line 797, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply textarea {
-    width: 95%;
-  }
-  /* line 801, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content h2 {
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 640px) {
-  /* line 808, SCSS/kbe_style.scss */
-  #kbe_container #kbe_container {
-    width: 100%;
-    margin: 0 auto;
-  }
-  /* line 811, SCSS/kbe_style.scss */
-  #kbe_container #kbe_container h1 {
-    text-align: center;
-  }
-  /* line 815, SCSS/kbe_style.scss */
-  #kbe_container .kbe_breadcrum ul {
-    width: 100%;
-    text-align: center;
-  }
-  /* line 818, SCSS/kbe_style.scss */
-  #kbe_container .kbe_breadcrum ul li {
-    float: none;
-    display: inline-block;
-    line-height: 22px;
-  }
-  /* line 824, SCSS/kbe_style.scss */
-  #kbe_container .kbe_search_field {
-    width: 100%;
-  }
-  /* line 827, SCSS/kbe_style.scss */
-  #kbe_container #search-result {
-    width: 100% !important;
-  }
-  /* line 830, SCSS/kbe_style.scss */
-  #kbe_container .kbe_no_result {
-    width: 89% !important;
-  }
-  /* line 833, SCSS/kbe_style.scss */
-  #kbe_container .kbe_search_field input[type="text"] {
-    padding: 17px 4px 13px 9px;
-    text-align: center;
-    width: 97%;
-  }
-  /* line 838, SCSS/kbe_style.scss */
-  #kbe_container .kbe_leftcol {
-    width: 100%;
-    float: none;
-  }
-  /* line 842, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_left, #kbe_container .kbe_content_right {
-    float: left;
-    width: 100% !important;
-    margin-bottom: 30px;
-  }
-  /* line 847, SCSS/kbe_style.scss */
-  #kbe_container .kbe_category, #kbe_container .kbe_categories {
-    width: 100%;
-  }
-  /* line 851, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_category h2 a {
-    width: 62%;
-  }
-  /* line 855, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_articles .kbe_read_more, #kbe_container #kbe_content .kbe_leftcol .kbe_articles_search .kbe_read_more {
-    float: right;
-    width: 120px;
-  }
-  /* line 862, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_categories {
-    width: 100%;
-  }
-  /* line 865, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_category {
-    width: 100% !important;
-    margin: 0 0 30px 0;
-  }
-  /* line 869, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_aside {
-    display: none;
-  }
-  /* line 873, SCSS/kbe_style.scss */
-  #kbe_container .kbe_aside {
-    float: none;
-    width: 100%;
-  }
-  /* line 876, SCSS/kbe_style.scss */
-  #kbe_container .kbe_aside.kbe_aside_left, #kbe_container .kbe_aside.kbe_aside_right {
-    float: none !important;
-  }
-  /* line 880, SCSS/kbe_style.scss */
-  #kbe_container .kbe_reply {
-    padding-top: 40px;
-    width: 100%;
-  }
-  /* line 885, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply textarea {
-    width: 96%;
-  }
-  /* line 888, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply input[type="text"] {
-    width: 60%;
-  }
-  /* line 893, SCSS/kbe_style.scss */
-  #kbe_container input[type="submit"], #kbe_container input[type="button"], #kbe_container input[type="reset"] {
-    width: 20%;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (min-width: 361px) and (max-width: 480px) {
-  /* line 901, SCSS/kbe_style.scss */
-  #kbe_container #kbe_container {
-    width: 100%;
-    margin: 0 auto;
-  }
-  /* line 904, SCSS/kbe_style.scss */
-  #kbe_container #kbe_container h1 {
-    text-align: center;
-  }
-  /* line 908, SCSS/kbe_style.scss */
-  #kbe_container .kbe_breadcrum ul {
-    width: 100%;
-    text-align: center;
-  }
-  /* line 911, SCSS/kbe_style.scss */
-  #kbe_container .kbe_breadcrum ul li {
-    float: none;
-    display: inline-block;
-    line-height: 22px !important;
-  }
-  /* line 917, SCSS/kbe_style.scss */
-  #kbe_container .kbe_search_field {
-    width: 100%;
-  }
-  /* line 919, SCSS/kbe_style.scss */
-  #kbe_container .kbe_search_field input[type="text"] {
-    padding: 17px 4px 13px 9px;
-    text-align: center;
-    width: 96%;
-  }
-  /* line 925, SCSS/kbe_style.scss */
-  #kbe_container #search-result {
-    width: 100% !important;
-  }
-  /* line 928, SCSS/kbe_style.scss */
-  #kbe_container .kbe_no_result {
-    width: 85% !important;
-  }
-  /* line 931, SCSS/kbe_style.scss */
-  #kbe_container .kbe_leftcol {
-    width: 100%;
-    float: none;
-    margin-bottom: 30px;
-  }
-  /* line 936, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_left {
-    float: left;
-    width: 100% !important;
-    margin-bottom: 30px;
-  }
-  /* line 941, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_right {
-    float: right;
-    width: 100% !important;
-    margin-bottom: 30px;
-  }
-  /* line 946, SCSS/kbe_style.scss */
-  #kbe_container .kbe_categories {
-    width: 100%;
-  }
-  /* line 949, SCSS/kbe_style.scss */
-  #kbe_container .kbe_category {
-    width: 100%;
-    margin: 0 0 30px 0;
-  }
-  /* line 954, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_category h2 a {
-    width: 62%;
-  }
-  /* line 958, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_articles .kbe_read_more, #kbe_container #kbe_content .kbe_leftcol .kbe_articles_search .kbe_read_more {
-    float: right;
-    width: 88px;
-  }
-  /* line 965, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_categories {
-    width: 100%;
-  }
-  /* line 968, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_category {
-    width: 100% !important;
-    margin: 0 0 30px 0;
-  }
-  /* line 972, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_aside {
-    display: none;
-  }
-  /* line 976, SCSS/kbe_style.scss */
-  #kbe_container .kbe_aside {
-    float: none;
-    width: 100%;
-  }
-  /* line 979, SCSS/kbe_style.scss */
-  #kbe_container .kbe_aside.kbe_aside_left, #kbe_container .kbe_aside.kbe_aside_right {
-    float: none !important;
-  }
-  /* line 983, SCSS/kbe_style.scss */
-  #kbe_container .kbe_reply {
-    width: 100%;
-  }
-  /* line 987, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply textarea {
-    width: 95%;
-    height: 100px;
-  }
-  /* line 991, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply span {
-    text-align: center;
-  }
-  /* line 994, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply input[type="text"] {
-    width: 95%;
-    padding: 5px 10px;
-  }
-  /* line 1001, SCSS/kbe_style.scss */
-  #kbe_container input[type="submit"], #kbe_container input[type="button"], #kbe_container input[type="reset"] {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 360px) {
-  /* line 1009, SCSS/kbe_style.scss */
-  #kbe_container #kbe_container {
-    width: 100%;
-    margin: 0 auto;
-  }
-  /* line 1012, SCSS/kbe_style.scss */
-  #kbe_container #kbe_container h1 {
-    text-align: center;
-  }
-  /* line 1016, SCSS/kbe_style.scss */
-  #kbe_container .kbe_breadcrum ul {
-    width: 100%;
-    text-align: center;
-  }
-  /* line 1019, SCSS/kbe_style.scss */
-  #kbe_container .kbe_breadcrum ul li {
-    float: none;
-    display: inline-block;
-    line-height: 22px;
-  }
-  /* line 1025, SCSS/kbe_style.scss */
-  #kbe_container .kbe_search_field {
-    width: 100%;
-  }
-  /* line 1027, SCSS/kbe_style.scss */
-  #kbe_container .kbe_search_field input[type="text"] {
-    padding: 17px 4px 13px 9px;
-    text-align: center;
-    width: 94%;
-  }
-  /* line 1033, SCSS/kbe_style.scss */
-  #kbe_container #search-result {
-    width: 100% !important;
-  }
-  /* line 1036, SCSS/kbe_style.scss */
-  #kbe_container .kbe_no_result {
-    width: 78% !important;
-  }
-  /* line 1039, SCSS/kbe_style.scss */
-  #kbe_container .kbe_leftcol {
-    width: 100%;
-    float: none;
-    margin-bottom: 30px;
-  }
-  /* line 1045, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_category h2 a {
-    width: 62%;
-  }
-  /* line 1049, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_articles .kbe_read_more, #kbe_container #kbe_content .kbe_leftcol .kbe_articles_search .kbe_read_more {
-    float: right;
-    width: 88px;
-  }
-  /* line 1055, SCSS/kbe_style.scss */
-  #kbe_container .kbe_category {
-    width: 100%;
-    margin: 0 0 30px 0;
-  }
-  /* line 1059, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_full .kbe_category, #kbe_container .kbe_categories {
-    width: 100%;
-  }
-  /* line 1062, SCSS/kbe_style.scss */
-  #kbe_container .kbe_articles ul li a, #kbe_container .kbe_articles_search ul li a {
-    color: #fff;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 26px;
-    text-decoration: none;
-  }
-  /* line 1069, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol ul li, #kbe_container ol li {
-    color: #ffb8cf;
-    font-size: 14px;
-    line-height: 22px;
-    margin-bottom: 15px;
-  }
-  /* line 1075, SCSS/kbe_style.scss */
-  #kbe_container .kbe_aside {
-    float: none;
-    width: 100%;
-  }
-  /* line 1078, SCSS/kbe_style.scss */
-  #kbe_container .kbe_aside.kbe_aside_left, #kbe_container .kbe_aside.kbe_aside_right {
-    float: none !important;
-  }
-  /* line 1082, SCSS/kbe_style.scss */
-  #kbe_container .kbe_content_left, #kbe_container .kbe_content_right {
-    float: none;
-    width: 100% !important;
-  }
-  /* line 1086, SCSS/kbe_style.scss */
-  #kbe_container .kbe_reply {
-    width: 100%;
-  }
-  /* line 1090, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply textarea {
-    width: 92%;
-    height: 100px;
-  }
-  /* line 1094, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply span {
-    text-align: center;
-  }
-  /* line 1097, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol .kbe_reply input[type="text"] {
-    width: 92%;
-    padding: 4px 10px;
-  }
-  /* line 1103, SCSS/kbe_style.scss */
-  #kbe_container input[type="submit"], #kbe_container input[type="button"], #kbe_container input[type="reset"] {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  /* line 1108, SCSS/kbe_style.scss */
-  #kbe_container #kbe_content .kbe_leftcol h2 {
-    background: url(images/article.svg) no-repeat left center;
-    background-size: 14px auto;
-    border-bottom: 1px solid #CCCCCC;
-    font-size: 18px;
-    font-weight: normal;
-    margin-bottom: 25px;
-    padding: 0 0 16px 30px;
-  }
+  content: none;
+}
+/* line 212, SCSS/kbe_style.scss */
+#kbe_container .kbe_article_list li:hover {
+  background-color: #5a5a5a;
 }

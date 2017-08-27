@@ -50,7 +50,8 @@ $kbe_tag_post_args = array(
 
     </div>
 
-    <?php aside(); ?>
-
-</div><?php
-	get_footer( 'knowledgebase' );
+<?php
+    aside($kbe_sidebar_class);
+    only_theme();
+    echo '</div>';
+    get_footer( 'knowledgebase' );

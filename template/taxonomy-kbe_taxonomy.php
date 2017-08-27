@@ -43,7 +43,8 @@ $kbe_cat_name = get_queried_object()->name;
 
 	</div>
 	<!--/content-->
-<?php aside(); ?>
-</div>
 <?php
-get_footer( 'knowledgebase' );
+    aside($kbe_sidebar_class);
+    only_theme();
+    echo '</div>';
+    get_footer( 'knowledgebase' );

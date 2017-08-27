@@ -2,23 +2,27 @@
 include('constant.php');
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-
+function only_theme(){
+	switch(get_template()){
+	case 'luxeritas':
+	    echo '</main>';
+	    echo '</div><!--/#main-->';
+		thk_call_sidebar();
+		echo '</div><!--/#primary-->';
+		echo apply_filters( 'thk_footer', '' );
+		break;
+	}
+}
 function init_classes($place_const,&$kbe_content_class,&$kbe_sidebar_class){
 	// Classes For main content div
 	if ( $place_const == 0 ) {
-		$kbe_content_class = 'class="kbe_content_full"';
-	} elseif ( $place_const == 1 ) {
-		$kbe_content_class = 'class="kbe_content_right"';
-	} elseif ( $place_const == 2 ) {
-		$kbe_content_class = 'class="kbe_content_left"';
-	}
-
-	// Classes For sidebar div
-	if ( $place_const == 0 ) {
+		$kbe_content_class = 'class="post kbe_content_full"';
 		$kbe_sidebar_class = 'kbe_aside_none';
 	} elseif ( $place_const == 1 ) {
+		$kbe_content_class = 'class="post kbe_content_right"';
 		$kbe_sidebar_class = 'kbe_aside_left';
 	} elseif ( $place_const == 2 ) {
+		$kbe_content_class = 'class="post kbe_content_left"';
 		$kbe_sidebar_class = 'kbe_aside_right';
 	}
 }
@@ -40,9 +44,11 @@ function search_field(){
 }
 
 // aside
-function aside(){
-	echo '<div class="kbe_aside <?php echo $kbe_sidebar_class; ?>';
+function aside($kbe_sidebar_class){
+	$aside_tag = '<div class="kbe_aside %s">';
+	echo sprintf($aside_tag, $kbe_sidebar_class);
 	if ( (KBE_SIDEBAR_HOME == 2) || (KBE_SIDEBAR_HOME == 1) ) {
+		// dynamic_sidebar( 'kbe_cat_widget' );
 		dynamic_sidebar( 'kbe_cat_widget' );
 	}
 	echo '</div>';
