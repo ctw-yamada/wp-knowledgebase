@@ -3,110 +3,16 @@
 @import "partials/mixin";
 @import "partials/variables";
 
-
-//colors
-$color_cotton_candy_approx: #ffb8cf;
-$gray: gray;
-$color_chicago_approx: #5a5a5a;
-$color_mine_shaft_approx: #333;
-$alto: #dbdbdb;
-$search_link: #f2f2f2;
-$color_picton_blue_approx: #42bcf4;
-$color_waikawa_gray_approx: #5870a0;
-$color_pattens_blue_approx: #e0edff;
-$color_matisse_approx: #166c94;
-$concrete: #f2f2f2;
-
-//urls
-$url_0: url(images/article.svg);
-$url_1: url(images/kbe_search_btn.png);
-$url_2: url(images/angle-right.svg);
-$url_3: url(images/kbe_icon_tag.png);
-$url_4: url(images/tag.svg);
-
-//@extend-elements
-//original selectors
-//.extend_a, .extend_li a, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li a, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li a
-%extend_1 {
-  color: $concrete;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 3px 0;
-  display: block;
-}
-
-//original selectors
-//.extend_a:before, .extend_li a:before, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li a:before, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li a:before
-%extend_2 {
-  content: '';
-  display: inline-block;
-  margin-right: 1rem;
-  width: 16px;
-  height: 16px;
-  background: $url_0 no-repeat left center;
-  background-size: 14px auto;
-}
-
-//original selectors
-//.extend_li, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li
-%extend_3 {
-  margin-top: 5px;
-  margin-bottom: 1rem;
-  margin-left: 0;
-  padding: 0 0 0 1rem;
-  line-height: 20px;
-  background-color: $gray;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-  border-radius: 5px;
-}
-
-//original selectors
-//.extend_article_list, #kbe_container #kbe_content .kbe_category .kbe_article_list, #kbe_container #kbe_content .kbe_child_category .kbe_child_article_list
-%extend_4 {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-//original selectors
-//#kbe_container table tr, #kbe_container table td
-%extend_5 {
-  border: 1px solid $alto;
-  padding: 4px;
-  font-size: 12px;
-}
-
-
-.extend_a {
-  @extend %extend_1;
-  &:before {
-    @extend %extend_2;
-  }
-}
-.extend_li {
-  @extend %extend_3;
-  a {
-    @extend %extend_1;
-    &:before {
-      @extend %extend_2;
-    }
-  }
-  &:hover {
-    background-color: $color_chicago_approx;
-  }
-}
-
 @import "partials/search";
-// media query
-// @import "partials/media-1024";
-// @import "partials/media-767";
-// @import "partials/media-640";
-// @import "partials/media-480";
-// @import "partials/media-360";
 
 #kbe_container {
+  background-color: $back-color;
+  border: solid 1px;
+  border-radius: 10px;
+  padding: 2.8rem;
+  margin:0 1rem;
   h2{
-    border-bottom: solid 3px #fff;
+    border-bottom: solid 3px $font-color;
   }
 //   *zoom: 1;
 //   background: $color_mine_shaft_approx;
@@ -150,9 +56,9 @@ $url_4: url(images/tag.svg);
     background: $color_matisse_approx;
   }
   .kbe_category {
-    width: 90%;
-    margin: 0 35px 30px 0;
-    padding-left: 1.5rem;
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding-left: 2.5rem;
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -160,13 +66,15 @@ $url_4: url(images/tag.svg);
       all: initial;
       border-bottom: solid 3px $concrete;
       padding-left: 1.5rem;
+      @include linkColor($back-blue-color);
+      border-radius: 5px;
       &:before{
         all: initial;
       }
       a{
         display: inline-block;
         text-decoration: none;
-        color: #fff;
+        color:$font-color;
         width: 70%;
       }
     }
@@ -174,14 +82,16 @@ $url_4: url(images/tag.svg);
       all: initial;
       position: relative;
       padding-left: 1rem;
-      border-bottom: 1px solid #cccccc;
-      color: #fff;
-      font-size: 20px !important;
+      border-bottom: 3px solid $concrete;
+      border-left: 3px solid $concrete;
+      color: $font-color;
+      @include linkColor($back-pink-color);
+      border-radius: 2px;
       a{
         display: inline-block;
         text-decoration: none;
-        color: #fff;
         width: 70%;
+        color:$font-color;
       }
       &:before, &:after{
         all:initial;
@@ -199,14 +109,14 @@ $url_4: url(images/tag.svg);
       }
     }
   }
-  .kbe_article_list {
-    @extend %extend_4;
+  .kbe_article_list, .kbe_child_article_list {
+    @extend %extend_article_list;
     li {
       @extend %extend_3;
       a {
         @extend %extend_1;
         &:before {
-          @extend %extend_2;
+          @extend %extend-img-article;
         }
       }
       &:hover {
@@ -215,7 +125,7 @@ $url_4: url(images/tag.svg);
     }
   }
   .kbe_child_article_list {
-    @extend %extend_4;
+    @extend %extend_article_list;
   }
 
 /* --------------------------------------------------
@@ -384,7 +294,7 @@ $type: xs sm md lg;
 //         a {
 //           @extend %extend_1;
 //           &:before {
-//             @extend %extend_2;
+//             @extend %extend-img-article;
 //           }
 //         }
 //         &:hover {
@@ -534,7 +444,7 @@ $type: xs sm md lg;
 //       padding: 0 0 0 25px;
 //     }
 //     .kbe_aside .kbe_widget_article li {
-//       background: $url_0 no-repeat left center;
+//       background: $url_img_article no-repeat left center;
 //       background-size: 14px auto;
 //     }
 //   }
@@ -743,11 +653,11 @@ $type: xs sm md lg;
 //     list-style: none outside none;
 //     padding: 4px 0 24px 30px;
 //     margin: 0 0 10px;
-//     background: $url_0 no-repeat left center;
+//     background: $url_img_article no-repeat left center;
 //     background-size: 14px auto;
 //     border-bottom: 1px solid $concrete;
 //   }
 // }
 // .extend_article_list {
-//   @extend %extend_4;
+//   @extend %extend_article_list;
 }

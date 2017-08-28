@@ -4,16 +4,6 @@
 	font-size: 12px;
 }
 
-@mixin image_article{
-	content: '';
-	display: inline-block;
-	margin-right: 1rem;
-	width: 16px;
-	height: 16px;
-	background: url(images/article.svg) no-repeat left center;
-	background-size: 14px auto;
-}
-
 @mixin linkColor($color, $amount:30%) {
 	background-color: $color;
 	&:hover, &:active, &:focus {

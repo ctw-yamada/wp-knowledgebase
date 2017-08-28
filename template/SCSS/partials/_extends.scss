@@ -1,17 +1,12 @@
 @import "variables";
 @import "mixin";
 
-.extend_a{
-  color: $font-color;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 3px 0px;
-  display: block;
+.extend_a {
+  @extend %extend_1;
   &:before {
-    @include image_article;
+    @extend %extend-img-article;
   }
 }
-
 .extend_li {
   margin-top: 5px;
   margin-bottom: 20px;
@@ -28,8 +23,55 @@
   }
 }
 
-.extend_article_list{
+//@extend-elements
+//original selectors
+//.extend_a, .extend_li a, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li a, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li a
+%extend_1 {
+  color: $concrete;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 3px 0;
+  display: block;
+}
+
+//original selectors
+//.extend_a:before, .extend_li a:before, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li a:before, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li a:before
+%extend-img-article {
+  content: '';
+  display: inline-block;
+  margin-right: 1rem;
+  width: 16px;
+  height: 16px;
+  background: $url_img_article no-repeat left center;
+  background-size: 14px auto;
+}
+
+//original selectors
+//.extend_li, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li
+%extend_3 {
+  margin-top: 5px;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  padding: 0 0 0 1rem;
+  line-height: 20px;
+  background-color: $gray;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+}
+
+//original selectors
+//.extend_article_list, #kbe_container #kbe_content .kbe_category .kbe_article_list, #kbe_container #kbe_content .kbe_child_category .kbe_child_article_list
+%extend_article_list {
   list-style: none;
   padding: 0;
   margin: 0;
+  padding-left: 1rem;
+}
+
+//original selectors
+//#kbe_container table tr, #kbe_container table td
+%extend_5 {
+  border: 1px solid $alto;
+  padding: 4px;
+  font-size: 12px;
 }

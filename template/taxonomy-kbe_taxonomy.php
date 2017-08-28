@@ -19,10 +19,8 @@ $kbe_cat_name = get_queried_object()->name;
 ?>
 <div id="kbe_container">
 <?php
-
 	bread_crumbs();
 	search_field();
-
 ?>
 	<!--Content-->
 	<div id="kbe_content" <?php echo $kbe_content_class; ?>>
@@ -32,10 +30,7 @@ $kbe_cat_name = get_queried_object()->name;
 	        <!--<articles>-->
 	        <div class="kbe_articles">
 <?php
-				$kbe_terms = kbe_get_terms(get_queried_object()->parent);
-				foreach ( $kbe_terms as $kbe_taxonomy ) {
-					root_category_proc($kbe_taxonomy);
-				}
+				root_category_proc(get_queried_object());
 ?>
 	        </div>
 	    </div>

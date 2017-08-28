@@ -20,7 +20,7 @@
     background-color: $gray;
     li {
       @include linkColor($gray);
-      background: $url_0 no-repeat scroll left 16px top 13px;
+      background: $url_img_article no-repeat scroll left 16px top 13px;
       background-size: 14px auto;
       list-style: none outside none;
       padding: 0 0 0 8px;
@@ -53,7 +53,7 @@
     }
   }
   .kbe_no_result {
-    background: $url_0 no-repeat;
+    background: $url_img_article no-repeat;
     background-position: 2rem,center;
     background-color: $gray;
     background-size: 14px auto;
