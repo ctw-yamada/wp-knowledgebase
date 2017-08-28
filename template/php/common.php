@@ -5,6 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 function only_theme(){
 	switch(get_template()){
 	case 'luxeritas':
+		global $luxe;
+		$luxe['sns_layout'] = null;
+		get_template_part('sns');
 	    echo '</main>';
 	    echo '</div><!--/#main-->';
 		thk_call_sidebar();
