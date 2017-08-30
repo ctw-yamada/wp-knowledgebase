@@ -59,22 +59,18 @@ function aside($kbe_sidebar_class){
 
 // xxxArticles
 function count_child_article($kbe_child_term){
+	$badge = make_badge_tag($kbe_child_term->count);
 	echo '<h3>';
-		echo '<span class="kbe_count">';
-			echo sprintf( _n( '%d Article', '%d Articles', $kbe_child_term->count, 'wp-knowledgebase' ), $kbe_child_term->count );
-		echo '</span>';
-		echo sprintf(TAG_A,get_term_link( $kbe_child_term->slug, 'kbe_taxonomy'),"",$kbe_child_term->name);
+		echo sprintf(TAG_A,get_term_link( $kbe_child_term->slug, 'kbe_taxonomy'),"",$kbe_child_term->name.$badge);
 	echo '</h3>';
 }
 
 // xxxArticles
 function count_parent_article($kbe_taxonomy){
 	$kbe_count_sum_parent = get_article_count($kbe_taxonomy);
+	$badge = make_badge_tag($kbe_count_sum_parent);
 	echo '<h2>';
-		echo '<span class="kbe_count">';
-			echo sprintf( _n( '%d Article', '%d Articles', $kbe_count_sum_parent, 'wp-knowledgebase' ), $kbe_count_sum_parent );
-		echo '</span>';
-		echo sprintf(TAG_A,get_term_link( $kbe_taxonomy->slug, 'kbe_taxonomy'),"",$kbe_taxonomy->name);
+		echo sprintf(TAG_A,get_term_link( $kbe_taxonomy->slug, 'kbe_taxonomy'),"",$kbe_taxonomy->name.$badge);
 	echo '</h2>';
 }
 // ルート記事一覧
@@ -217,4 +213,16 @@ function kbe_articles_list($post_args){
 	endif;
 }
 
+/**
+ * バッジタグ生成
+ *
+ * @param string $content
+ * @return string
+ */
+function make_badge_tag($content){
+	$badge = '<span class="kbe_badge">';
+	$badge .= sprintf( _n( '%d Article', '%d Articles', $content, 'wp-knowledgebase' ), $content );
+	$badge .= '</span>';
+	return $badge;
+}
 ?>

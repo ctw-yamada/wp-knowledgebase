@@ -4,7 +4,23 @@
 @import "partials/variables";
 
 @import "partials/search";
-
+.kbe_badge{
+  padding: 3px 6px;
+  margin-right: 8px;
+  margin-left: 1px;
+  font-size: 75%;
+  float:right;
+  color: $font-dark-color;
+  border-radius: 6px;
+  box-shadow: 0 0 3px #ddd;
+  white-space: nowrap;
+  background-color: #feffa4;
+  &:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
 #kbe_container {
   background-color: $back-color;
   border: solid 1px;
