@@ -96,7 +96,7 @@
     }
     h3 {
       all: initial;
-      position: relative;
+      top:1rem;
       padding-left: 1rem;
       border-bottom: 3px solid $concrete;
       border-left: 3px solid $concrete;
@@ -104,6 +104,7 @@
       @include linkColor($back-pink-color);
       border-radius: 2px;
       a{
+        margin-top: 1rem;
         display: inline-block;
         text-decoration: none;
         width: 70%;

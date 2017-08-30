@@ -239,7 +239,7 @@
 /* line 97, SCSS/kbe_style.scss */
 #kbe_container .kbe_category h3 {
   all: initial;
-  position: relative;
+  top: 1rem;
   padding-left: 1rem;
   border-bottom: 3px solid #f2f2f2;
   border-left: 3px solid #f2f2f2;
@@ -253,23 +253,24 @@
 }
 /* line 106, SCSS/kbe_style.scss */
 #kbe_container .kbe_category h3 a {
+  margin-top: 1rem;
   display: inline-block;
   text-decoration: none;
   width: 70%;
   color: #fff;
 }
-/* line 112, SCSS/kbe_style.scss */
+/* line 113, SCSS/kbe_style.scss */
 #kbe_container .kbe_category h3:before, #kbe_container .kbe_category h3:after {
   all: initial;
 }
-/* line 116, SCSS/kbe_style.scss */
+/* line 117, SCSS/kbe_style.scss */
 #kbe_container .kbe_category span.switch {
   position: absolute;
   top: 4px;
   left: 0;
   margin: 0;
 }
-/* line 121, SCSS/kbe_style.scss */
+/* line 122, SCSS/kbe_style.scss */
 #kbe_container .kbe_category span.switch img {
   cursor: pointer;
   margin: 0;
