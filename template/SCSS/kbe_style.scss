@@ -128,15 +128,12 @@
   .kbe_article_list, .kbe_child_article_list {
     @extend %extend_article_list;
     li {
-      @extend %extend_3;
+      @extend %extend_li;
       a {
-        @extend %extend_1;
+        @extend %extend_a;
         &:before {
           @extend %extend-img-article;
         }
-      }
-      &:hover {
-        background-color: $color_chicago_approx;
       }
     }
   }
@@ -306,9 +303,9 @@ $type: xs sm md lg;
 //         }
 //       }
 //       .kbe_child_article_list li {
-//         @extend %extend_3;
+//         @extend %extend_li;
 //         a {
-//           @extend %extend_1;
+//           @extend %extend_a;
 //           &:before {
 //             @extend %extend-img-article;
 //           }

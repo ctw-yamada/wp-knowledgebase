@@ -1,32 +1,33 @@
 @import "variables";
 @import "mixin";
 
-.extend_a {
-  @extend %extend_1;
-  &:before {
-    @extend %extend-img-article;
-  }
-}
-.extend_li {
-  margin-top: 5px;
-  margin-bottom: 20px;
-  margin-left: 0;
-  padding: 0 0 0 1rem;
-  line-height: 20px;
-  background-color: gray;
-  border-radius: 5px;
-  &:hover{
-    background-color: darken(gray,15%);
-  }
-  a {
-    @extend .extend_a;
-  }
-}
+// .extend_a {
+//   @extend %extend_a;
+//   &:before {
+//     @extend %extend-img-article;
+//   }
+// }
+// .extend_li {
+//   margin-top: 5px;
+//   margin-bottom: 20px;
+//   margin-left: 0;
+//   padding: 0 0 0 1rem;
+//   line-height: 20px;
+//   background-color: gray;
+//   border-radius: 5px;
+//   display: inline-block;
+//   &:hover{
+//     background-color: darken(gray,15%);
+//   }
+//   a {
+//     @extend .extend_a;
+//   }
+// }
 
 //@extend-elements
 //original selectors
 //.extend_a, .extend_li a, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li a, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li a
-%extend_1 {
+%extend_a {
   color: $concrete;
   text-decoration: none;
   font-size: 14px;
@@ -48,13 +49,13 @@
 
 //original selectors
 //.extend_li, #kbe_container #kbe_content .kbe_leftcol .kbe_child_article_list li, #kbe_container #kbe_content .kbe_leftcol .kbe_article_list li
-%extend_3 {
-  margin-top: 5px;
-  margin-bottom: 1rem;
+%extend_li {
+  margin-top: 1rem;
   margin-left: 0;
-  padding: 0 0 0 1rem;
+  padding: 0 2rem;
   line-height: 20px;
-  background-color: $gray;
+  display: inline-block;
+  @include linkColor($gray,15%);
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 5px;
 }

@@ -1,20 +1,5 @@
-/* line 10, SCSS/partials/_extends.scss */
-.extend_li {
-  margin-top: 5px;
-  margin-bottom: 20px;
-  margin-left: 0;
-  padding: 0 0 0 1rem;
-  line-height: 20px;
-  background-color: gray;
-  border-radius: 5px;
-}
-/* line 18, SCSS/partials/_extends.scss */
-.extend_li:hover {
-  background-color: #5a5a5a;
-}
-
-/* line 29, SCSS/partials/_extends.scss */
-.extend_a, .extend_li a, #kbe_container .kbe_article_list li a, #kbe_container .kbe_child_article_list li a {
+/* line 30, SCSS/partials/_extends.scss */
+#kbe_container .kbe_article_list li a, #kbe_container .kbe_child_article_list li a {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 14px;
@@ -22,8 +7,8 @@
   display: block;
 }
 
-/* line 39, SCSS/partials/_extends.scss */
-.extend_a:before, .extend_li a:before, #kbe_container .kbe_article_list li a:before, #kbe_container .kbe_child_article_list li a:before {
+/* line 40, SCSS/partials/_extends.scss */
+#kbe_container .kbe_article_list li a:before, #kbe_container .kbe_child_article_list li a:before {
   content: '';
   display: inline-block;
   margin-right: 1rem;
@@ -33,18 +18,22 @@
   background-size: 14px auto;
 }
 
-/* line 51, SCSS/partials/_extends.scss */
+/* line 52, SCSS/partials/_extends.scss */
 #kbe_container .kbe_article_list li, #kbe_container .kbe_child_article_list li {
-  margin-top: 5px;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   margin-left: 0;
-  padding: 0 0 0 1rem;
+  padding: 0 2rem;
   line-height: 20px;
+  display: inline-block;
   background-color: gray;
   border-radius: 5px;
 }
+/* line 9, SCSS/partials/_mixin.scss */
+#kbe_container .kbe_article_list li:hover, #kbe_container .kbe_child_article_list li:hover, #kbe_container .kbe_article_list li:active, #kbe_container .kbe_child_article_list li:active, #kbe_container .kbe_article_list li:focus, #kbe_container .kbe_child_article_list li:focus {
+  background-color: #5a5a5a;
+}
 
-/* line 64, SCSS/partials/_extends.scss */
+/* line 65, SCSS/partials/_extends.scss */
 #kbe_container .kbe_article_list, #kbe_container .kbe_child_article_list {
   list-style: none;
   padding: 0;
@@ -285,8 +274,4 @@
   cursor: pointer;
   margin: 0;
   content: none;
-}
-/* line 138, SCSS/kbe_style.scss */
-#kbe_container .kbe_article_list li:hover, #kbe_container .kbe_child_article_list li:hover {
-  background-color: #5a5a5a;
 }
