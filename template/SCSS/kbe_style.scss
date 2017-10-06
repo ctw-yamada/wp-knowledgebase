@@ -9,7 +9,11 @@
   margin-right: 8px;
   margin-left: 1px;
   font-size: 75%;
-  float:right;
+  // float:right;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  width: 7rem;
   color: $font-dark-color;
   border-radius: 6px;
   box-shadow: 0 0 3px #ddd;
@@ -80,6 +84,7 @@
     position: relative;
     h2 {
       all: initial;
+      display: block;
       border-bottom: solid 3px $concrete;
       padding-left: 1.5rem;
       @include linkColor($back-blue-color);

@@ -54,7 +54,7 @@
   margin-left: 0;
   padding: 0 2rem;
   line-height: 20px;
-  display: inline-block;
+  // display: inline-block;
   @include linkColor($gray,15%);
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 5px;

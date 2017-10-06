@@ -24,7 +24,6 @@
   margin-left: 0;
   padding: 0 2rem;
   line-height: 20px;
-  display: inline-block;
   background-color: gray;
   border-radius: 5px;
 }
@@ -128,21 +127,24 @@
   margin-right: 8px;
   margin-left: 1px;
   font-size: 75%;
-  float: right;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  width: 7rem;
   color: #404040;
   border-radius: 6px;
   box-shadow: 0 0 3px #ddd;
   white-space: nowrap;
   background-color: #feffa4;
 }
-/* line 18, SCSS/kbe_style.scss */
+/* line 22, SCSS/kbe_style.scss */
 .kbe_badge:after {
   content: "";
   clear: both;
   display: block;
 }
 
-/* line 24, SCSS/kbe_style.scss */
+/* line 28, SCSS/kbe_style.scss */
 #kbe_container {
   background-color: #333333;
   border: solid 1px;
@@ -163,35 +165,35 @@
   /* PC(Extra large)
   -------------------------------------------------- */
 }
-/* line 30, SCSS/kbe_style.scss */
+/* line 34, SCSS/kbe_style.scss */
 #kbe_container h2 {
   border-bottom: solid 3px #fff;
 }
-/* line 42, SCSS/kbe_style.scss */
+/* line 46, SCSS/kbe_style.scss */
 #kbe_container .kbe_breadcrum {
   margin: 0 0 30px;
   overflow: hidden;
   width: 100%;
 }
-/* line 46, SCSS/kbe_style.scss */
+/* line 50, SCSS/kbe_style.scss */
 #kbe_container .kbe_breadcrum ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 50, SCSS/kbe_style.scss */
+/* line 54, SCSS/kbe_style.scss */
 #kbe_container .kbe_breadcrum ul li {
   float: left;
   padding: 0 3px 2px;
   line-height: 22px;
 }
-/* line 54, SCSS/kbe_style.scss */
+/* line 58, SCSS/kbe_style.scss */
 #kbe_container .kbe_breadcrum ul li a {
   text-decoration: none;
   font-size: 14px;
   color: #f2f2f2;
 }
-/* line 62, SCSS/kbe_style.scss */
+/* line 66, SCSS/kbe_style.scss */
 #kbe_container .kbe_count {
   color: #f2f2f2;
   font-size: 14px;
@@ -204,7 +206,7 @@
   display: block;
   background: #166c94;
 }
-/* line 74, SCSS/kbe_style.scss */
+/* line 78, SCSS/kbe_style.scss */
 #kbe_container .kbe_category {
   width: 100%;
   margin: 0 0 10px 0;
@@ -213,9 +215,10 @@
   vertical-align: top;
   position: relative;
 }
-/* line 81, SCSS/kbe_style.scss */
+/* line 85, SCSS/kbe_style.scss */
 #kbe_container .kbe_category h2 {
   all: initial;
+  display: block;
   border-bottom: solid 3px #f2f2f2;
   padding-left: 1.5rem;
   background-color: #4763c2;
@@ -225,18 +228,18 @@
 #kbe_container .kbe_category h2:hover, #kbe_container .kbe_category h2:active, #kbe_container .kbe_category h2:focus {
   background-color: #1c2954;
 }
-/* line 87, SCSS/kbe_style.scss */
+/* line 92, SCSS/kbe_style.scss */
 #kbe_container .kbe_category h2:before {
   all: initial;
 }
-/* line 90, SCSS/kbe_style.scss */
+/* line 95, SCSS/kbe_style.scss */
 #kbe_container .kbe_category h2 a {
   display: inline-block;
   text-decoration: none;
   color: #fff;
   width: 70%;
 }
-/* line 97, SCSS/kbe_style.scss */
+/* line 102, SCSS/kbe_style.scss */
 #kbe_container .kbe_category h3 {
   all: initial;
   top: 1rem;
@@ -251,7 +254,7 @@
 #kbe_container .kbe_category h3:hover, #kbe_container .kbe_category h3:active, #kbe_container .kbe_category h3:focus {
   background-color: #ae443e;
 }
-/* line 106, SCSS/kbe_style.scss */
+/* line 111, SCSS/kbe_style.scss */
 #kbe_container .kbe_category h3 a {
   margin-top: 1rem;
   display: inline-block;
@@ -259,18 +262,18 @@
   width: 70%;
   color: #fff;
 }
-/* line 113, SCSS/kbe_style.scss */
+/* line 118, SCSS/kbe_style.scss */
 #kbe_container .kbe_category h3:before, #kbe_container .kbe_category h3:after {
   all: initial;
 }
-/* line 117, SCSS/kbe_style.scss */
+/* line 122, SCSS/kbe_style.scss */
 #kbe_container .kbe_category span.switch {
   position: absolute;
   top: 4px;
   left: 0;
   margin: 0;
 }
-/* line 122, SCSS/kbe_style.scss */
+/* line 127, SCSS/kbe_style.scss */
 #kbe_container .kbe_category span.switch img {
   cursor: pointer;
   margin: 0;

@@ -5,7 +5,9 @@ require 'compass/import-once/activate'
 http_path = "/"
 css_dir = "../"
 sass_dir = "/"
-images_dir = "images"
+cache = false
+# cache_dir = '.sass-cache'
+images_dir = "./images"
 javascripts_dir = "javascripts"
 
 # You can select your preferred output style here (can be overridden via the command line):

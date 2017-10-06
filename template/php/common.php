@@ -223,7 +223,7 @@ function kbe_articles_list($post_args){
 			echo '</li>';
 		endwhile;
 	else :
-		echo 'No posts';
+		// echo 'No posts';
 	endif;
 }
 
