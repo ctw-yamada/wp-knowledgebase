@@ -40,6 +40,10 @@ $kbe_cat_name = get_queried_object()->name;
 	<!--/content-->
 <?php
     aside($kbe_sidebar_class);
-    only_theme();
     echo '</div>';
-    get_footer( 'knowledgebase' );
+    
+	echo '</main>';
+	echo '</div><!--/#main-->';
+	thk_call_sidebar();
+	echo '</div><!--/#primary-->';
+	get_footer( 'knowledgebase' );

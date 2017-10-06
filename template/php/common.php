@@ -7,15 +7,29 @@ function only_theme(){
 	case 'luxeritas':
 		global $luxe;
 		$luxe['sns_layout'] = null;
+		printf('<div class="sns-msg"><h2>%s</h2></div>',$luxe['sns_bottoms_msg']);
 		get_template_part('sns');
 	    echo '</main>';
+	    echo apply_filters('thk_comments', '');
+	    echo my_trackback();
 	    echo '</div><!--/#main-->';
 		thk_call_sidebar();
 		echo '</div><!--/#primary-->';
-		echo apply_filters( 'thk_footer', '' );
 		break;
 	}
 }
+
+function my_trackback(){
+		echo '<div id="trackback" class="grid">';
+		echo '<h3 class="tb"><i class="fa fa-reply-all"></i>';
+		echo __( 'TrackBack URL', 'luxeritas' );
+		echo '</h3>';
+		echo '<input type="text" name="trackback_url" size="60" value="';
+		trackback_url();
+		echo '" readonly="readonly" class="trackback-url" tabindex="0" accesskey="t" />';
+		echo '</div>';
+}
+
 function init_classes($place_const,&$kbe_content_class,&$kbe_sidebar_class){
 	// Classes For main content div
 	if ( $place_const == 0 ) {
